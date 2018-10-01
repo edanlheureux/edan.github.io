@@ -14,10 +14,11 @@ function setup() {
   x = width/2;
   dx =5;
   rectwidth = 50;
+  background(5, 99, 205);
+
 }
 
 function draw() {
-  background(5, 99, 205);
 
 //move rectangle
 x += dx;
