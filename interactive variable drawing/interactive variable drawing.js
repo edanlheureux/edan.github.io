@@ -60,26 +60,64 @@ function preload(){
 
 
 function setup() {
-  createCanvas(1700, 800);
+  createCanvas(windowWidth, windowHeight);
   image(img,0,0,windowWidth, windowHeight);
   // background music
-  music.setVolume(0.4);
+  music.setVolume(0.7);
   music.loop();
 }
 
 function draw() {
-
+  imglocation();
 }
 
 
 
 function imglocation(){
   // luigi
-  if (mouseX < width*0.200 && mouseX > width*0.07 && mouseY < height*0.40 && mouseY > height*0.255){
-    image(imgB,119,315,322,300);
+  //rectMode(CORNERS);
+  //fill(255, 0, 0);
+  //rect( width*0.200, height*0.536, width*0.05, height*0.332);
+  if (mouseX < width*0.20 && mouseX > width*0.05 && mouseY < height*0.332 && mouseY > height*0.130){
+    image(imgB,260,300,120,120);
+  }
+  //mario
+  if (mouseX < width*0.35 && mouseX > width*0.200 && mouseY < height*0.332 && mouseY > height*0.130){
+    image(imgB,700,300,120,120);
+  }
+  //dk
+  if (mouseX < width*0.50 && mouseX > width*0.35 && mouseY < height*0.332 && mouseY > height*0.130){
+    image(imgB,1300,300,120,120);
+  }
+  //link
+  if (mouseX < width*0.65 && mouseX > width*0.50 && mouseY < height*0.332 && mouseY > height*0.130){
+    image(imgB,1900,300,120,120);
+  }
+  //samus
+  if (mouseX < width*0.80 && mouseX > width*0.65 && mouseY < height*0.332 && mouseY > height*0.130){
+    image(imgB,2300,300,120,120);
+  }
+  // capfalcon
+  if (mouseX < width*0.95 && mouseX > width*0.80 && mouseY < height*0.332 && mouseY > height*0.130){
+    image(imgB,2800,300,120,120);
+  }
+  //ness
+  if (mouseX < width*0.20 && mouseX > width*0.05 && mouseY < height*0.536 && mouseY > height*0.130){
+    image(imgB,260,600,120,120);
+  }
+  //yoshi
+  if (mouseX < width*0.35 && mouseX > width*0.20 && mouseY < height*0.536 && mouseY > height*0.130){
+    image(imgB,780,600,120,120);
+  }
+  //kirby
+  if (mouseX < width*0.50 && mouseX > width*0.35 && mouseY < height*0.536 && mouseY > height*0.130){
+    image(imgB,1300,600,120,120);
+  }
+  //fox
+  if (mouseX < width*0.65 && mouseX > width*0.50 && mouseY < height*0.536 && mouseY > height*0.130){
+    image(imgB,1750,600,120,120);
   }
 }
-
 // to play sound
 function charectersclicked(){
 
