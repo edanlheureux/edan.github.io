@@ -21,7 +21,7 @@ let box7 , box8;
 let box9 , box10;
 let box11 , box12;
 
-let ch1 , ch2;
+let state;
 
 let mousepoint;
 
@@ -61,71 +61,172 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  image(img,0,0,windowWidth, windowHeight);
+
   // background music
   music.setVolume(0.7);
   music.loop();
 }
 
 function draw() {
+  background(255);
+  image(img,0,0,windowWidth, windowHeight);
   imglocation();
 }
 
 
 
 function imglocation(){
-  // luigi
-  //rectMode(CORNERS);
+//  rectMode(CORNERS);
   //fill(255, 0, 0);
-  //rect( width*0.200, height*0.536, width*0.05, height*0.332);
+  //rect( width*0.20, height*0.92, width*0.10, height*0.66);
+
+
+  //luigi
   if (mouseX < width*0.20 && mouseX > width*0.05 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,260,300,120,120);
+    if (mouseIsPressed){
+      state =1;
+      music1.play(1.0);
+    }
   }
   //mario
-  if (mouseX < width*0.35 && mouseX > width*0.200 && mouseY < height*0.332 && mouseY > height*0.130){
+  else if (mouseX < width*0.35 && mouseX > width*0.200 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,700,300,120,120);
+    if (mouseIsPressed){
+      state =2;
+      music2.play(1.0);
+    }
   }
   //dk
-  if (mouseX < width*0.50 && mouseX > width*0.35 && mouseY < height*0.332 && mouseY > height*0.130){
+  else if (mouseX < width*0.50 && mouseX > width*0.35 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,1300,300,120,120);
+    if (mouseIsPressed){
+      state =3;
+      music3.play(1.0);
+    }
   }
   //link
-  if (mouseX < width*0.65 && mouseX > width*0.50 && mouseY < height*0.332 && mouseY > height*0.130){
+  else if (mouseX < width*0.65 && mouseX > width*0.50 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,1900,300,120,120);
+    if (mouseIsPressed){
+      state =4;
+      music4.play(1.0);
+    }
   }
   //samus
-  if (mouseX < width*0.80 && mouseX > width*0.65 && mouseY < height*0.332 && mouseY > height*0.130){
+  else if (mouseX < width*0.80 && mouseX > width*0.65 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,2300,300,120,120);
+    if (mouseIsPressed){
+      state =5;
+      music5.play(1.0);
+    }
   }
   // capfalcon
-  if (mouseX < width*0.95 && mouseX > width*0.80 && mouseY < height*0.332 && mouseY > height*0.130){
+  else if (mouseX < width*0.95 && mouseX > width*0.80 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,2800,300,120,120);
+    if (mouseIsPressed){
+      state =6;
+      music.stop();
+      music6.play(1.0);
+      music.play();
+    }
   }
   //ness
-  if (mouseX < width*0.20 && mouseX > width*0.05 && mouseY < height*0.536 && mouseY > height*0.130){
+  else if (mouseX < width*0.20 && mouseX > width*0.05 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,260,600,120,120);
+    if (mouseIsPressed){
+      state =7;
+      music7.play(1.0);
+    }
   }
   //yoshi
-  if (mouseX < width*0.35 && mouseX > width*0.20 && mouseY < height*0.536 && mouseY > height*0.130){
+  else if (mouseX < width*0.35 && mouseX > width*0.20 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,780,600,120,120);
+    if (mouseIsPressed){
+      state =8;
+      music8.play(1.0);
+    }
   }
   //kirby
-  if (mouseX < width*0.50 && mouseX > width*0.35 && mouseY < height*0.536 && mouseY > height*0.130){
+  else if (mouseX < width*0.50 && mouseX > width*0.35 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,1300,600,120,120);
+    if (mouseIsPressed){
+      state =9;
+      music9.play(1.0);
+    }
   }
   //fox
-  if (mouseX < width*0.65 && mouseX > width*0.50 && mouseY < height*0.536 && mouseY > height*0.130){
+  else if (mouseX < width*0.65 && mouseX > width*0.50 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,1750,600,120,120);
+    if (mouseIsPressed){
+      state =10;
+      music10.play(1.0);
+    }
+  }
+  //pikachu
+  else if (mouseX < width*0.80 && mouseX > width*0.65 && mouseY < height*0.536 && mouseY > height*0.337){
+    image(imgB,2200,600,120,120);
+    if (mouseIsPressed){
+      state =11;
+      music11.play(1.0);
+    }
+  }
+  //jigglypuff
+  else if (mouseX < width*0.95 && mouseX > width*0.80 && mouseY < height*0.536 && mouseY > height*0.337){
+    image(imgB,2700 ,600,120,120);
+    if (mouseIsPressed){
+      state =12;
+      music12.play(1.0);
+    }
+  }
+  // player 1 spot
+  else if (mouseX < width*0.20 && mouseX > width*0.10 && mouseY < height*0.92 && mouseY > height*0.66){
+    if (state === 1){
+      image(img1,220,1090,520,320);
+    }
+    if (state === 2){
+      image(img2,220,1090,520,320);
+    }
+    if (state === 3){
+      image(img3,220,1090,520,320);
+    }
+    if (state === 4){
+      image(img4,220,1090,520,320);
+    }
+    if (state === 5){
+      image(img5,220,1090,520,320);
+    }
+    if (state === 6){
+      image(img6,220,1090,520,320);
+    }
+    if (state === 7){
+      image(img7,220,1090,520,320);
+    }
+    if (state === 8){
+      image(img8,220,1090,520,320);
+    }
+    if (state === 9){
+      image(img9,220,1090,520,320);
+    }
+    if (state === 10){
+      image(img10,220,1090,520,320);
+    }
+    if (state === 11){
+      image(img11,220,1090,520,320);
+    }
+    if (state === 12){
+      image(img12,220,1090,520,320);
+    }
   }
 }
 // to play sound
 function charectersclicked(){
 
   music1.setVolume(1.0);
-  music.play();
+  music1.play();
 
   music2.setVolume(1.0);
-  music.play();
+  music2.play();
 
   music3.setVolume(1.0);
   music.play();
