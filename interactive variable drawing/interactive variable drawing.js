@@ -3,7 +3,7 @@
 // 9/27/18
 //
 // Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// - i brought back sweet sweet memories of youyr teenage/mid-adult years"
 
 // variables
 let music,music1,music2,music3;
@@ -76,10 +76,14 @@ function draw() {
 
 
 function imglocation(){
-//  rectMode(CORNERS);
+
+  // used to find dimensions for boxes.
+  //rectMode(CORNERS);
   //fill(255, 0, 0);
   //rect( width*0.20, height*0.92, width*0.10, height*0.66);
 
+
+  //determaning the 1p icon the location of the image and the select sound
 
   //luigi
   if (mouseX < width*0.20 && mouseX > width*0.05 && mouseY < height*0.332 && mouseY > height*0.130){
@@ -89,6 +93,7 @@ function imglocation(){
       music1.play(1.0);
     }
   }
+
   //mario
   else if (mouseX < width*0.35 && mouseX > width*0.200 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,700,300,120,120);
@@ -97,6 +102,7 @@ function imglocation(){
       music2.play(1.0);
     }
   }
+
   //dk
   else if (mouseX < width*0.50 && mouseX > width*0.35 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,1300,300,120,120);
@@ -105,6 +111,7 @@ function imglocation(){
       music3.play(1.0);
     }
   }
+
   //link
   else if (mouseX < width*0.65 && mouseX > width*0.50 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,1900,300,120,120);
@@ -113,6 +120,7 @@ function imglocation(){
       music4.play(1.0);
     }
   }
+
   //samus
   else if (mouseX < width*0.80 && mouseX > width*0.65 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,2300,300,120,120);
@@ -121,16 +129,16 @@ function imglocation(){
       music5.play(1.0);
     }
   }
+
   // capfalcon
   else if (mouseX < width*0.95 && mouseX > width*0.80 && mouseY < height*0.332 && mouseY > height*0.130){
     image(imgB,2800,300,120,120);
     if (mouseIsPressed){
       state =6;
-      music.stop();
       music6.play(1.0);
-      music.play();
     }
   }
+
   //ness
   else if (mouseX < width*0.20 && mouseX > width*0.05 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,260,600,120,120);
@@ -139,6 +147,7 @@ function imglocation(){
       music7.play(1.0);
     }
   }
+
   //yoshi
   else if (mouseX < width*0.35 && mouseX > width*0.20 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,780,600,120,120);
@@ -147,6 +156,7 @@ function imglocation(){
       music8.play(1.0);
     }
   }
+
   //kirby
   else if (mouseX < width*0.50 && mouseX > width*0.35 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,1300,600,120,120);
@@ -155,6 +165,7 @@ function imglocation(){
       music9.play(1.0);
     }
   }
+
   //fox
   else if (mouseX < width*0.65 && mouseX > width*0.50 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,1750,600,120,120);
@@ -163,6 +174,7 @@ function imglocation(){
       music10.play(1.0);
     }
   }
+
   //pikachu
   else if (mouseX < width*0.80 && mouseX > width*0.65 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,2200,600,120,120);
@@ -171,6 +183,7 @@ function imglocation(){
       music11.play(1.0);
     }
   }
+
   //jigglypuff
   else if (mouseX < width*0.95 && mouseX > width*0.80 && mouseY < height*0.536 && mouseY > height*0.337){
     image(imgB,2700 ,600,120,120);
@@ -179,82 +192,42 @@ function imglocation(){
       music12.play(1.0);
     }
   }
-  // player 1 spot
-  else if (mouseX < width*0.20 && mouseX > width*0.10 && mouseY < height*0.92 && mouseY > height*0.66){
-    if (state === 1){
-      image(img1,220,1090,520,320);
-    }
-    if (state === 2){
-      image(img2,220,1090,520,320);
-    }
-    if (state === 3){
-      image(img3,220,1090,520,320);
-    }
-    if (state === 4){
-      image(img4,220,1090,520,320);
-    }
-    if (state === 5){
-      image(img5,220,1090,520,320);
-    }
-    if (state === 6){
-      image(img6,220,1090,520,320);
-    }
-    if (state === 7){
-      image(img7,220,1090,520,320);
-    }
-    if (state === 8){
-      image(img8,220,1090,520,320);
-    }
-    if (state === 9){
-      image(img9,220,1090,520,320);
-    }
-    if (state === 10){
-      image(img10,220,1090,520,320);
-    }
-    if (state === 11){
-      image(img11,220,1090,520,320);
-    }
-    if (state === 12){
-      image(img12,220,1090,520,320);
-    }
+
+  // player 1 spot image
+  if (state === 1){
+    image(img1,220,1090,520,320);
   }
-}
-// to play sound
-function charectersclicked(){
-
-  music1.setVolume(1.0);
-  music1.play();
-
-  music2.setVolume(1.0);
-  music2.play();
-
-  music3.setVolume(1.0);
-  music.play();
-
-  music4.setVolume(1.0);
-  music.play();
-
-  music5.setVolume(1.0);
-  music.play();
-
-  music6.setVolume(1.0);
-  music.play();
-
-  music7.setVolume(1.0);
-  music.play();
-
-  music8.setVolume(1.0);
-  music.play();
-
-  music9.setVolume(1.0);
-  music.play();
-
-  music10.setVolume(1.0);
-  music.play();
-
-  music11.setVolume(1.0);
-  music.play();
-
-  music12.setVolume(1.0);
-  music.play();
+  if (state === 2){
+    image(img2,220,1090,520,320);
+  }
+  if (state === 3){
+    image(img3,220,1090,520,320);
+  }
+  if (state === 4){
+    image(img4,220,1090,520,320);
+  }
+  if (state === 5){
+    image(img5,220,1090,520,320);
+  }
+  if (state === 6){
+    image(img6,220,1090,520,320);
+  }
+  if (state === 7){
+    image(img7,220,1090,520,320);
+  }
+  if (state === 8){
+    image(img8,220,1090,520,320);
+  }
+  if (state === 9){
+    image(img9,220,1090,520,320);
+  }
+  if (state === 10){
+    image(img10,220,1090,520,320);
+  }
+  if (state === 11){
+    image(img11,220,1090,520,320);
+  }
+  if (state === 12){
+    image(img12,220,1090,520,320);
+  }
 }
